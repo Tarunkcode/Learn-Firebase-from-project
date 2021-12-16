@@ -1,0 +1,29 @@
+
+.existing-user{
+    width: 40%;
+    margin: 2em 5em ;
+    }
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+.google-sign-in{
+    background-color: lightblue;
+    color: black ;
+
+}
+.google-sign-in:hover,
+.google-sign-in:focus{
+    background-color: darkblue;
+    color: white;
+}
+.btn-seprator{
+    margin: 0.3em 0;
+}
+    @media (max-width:780px ) {
+        .existing-user{
+            width: 70%;
+            margin:0 auto;
+           
+     }
+}

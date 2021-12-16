@@ -1,0 +1,17 @@
+
+  .new-user{
+  width: 40%;
+  margin: 2em 5em ;
+  height: 70vh;
+  }
+  @media (max-width:780px ) {
+    .new-user{
+        width: 70%;
+        margin:0 auto;
+        height: auto;
+        .buttons{
+          margin-bottom: 100px;
+        }
+        
+    }
+ }

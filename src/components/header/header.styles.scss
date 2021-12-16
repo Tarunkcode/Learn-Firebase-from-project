@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+   font-family: "ubuntu", sans-serif;
+ 
+}
+.logo-container{
+box-sizing : border-box;
+color: red;
+padding: 0 1em;
+display: flex;
+margin:0;
+}
+.logo{
+  overflow: hidden;
+  position:inherit;
+  width: auto;
+  justify-content: left;
+  margin: 0;
+}
+.items{
+  display: flex;
+  flex-direction: column;
+ margin:auto 0;
+ padding: 0 0.5em;
+ 
+
+}
+.option{
+   margin-left: 0.5em;
+  padding: 0.5em;
+ margin-top: auto;
+ margin-bottom: auto;
+ color: #49281A;
+ font-weight: 700;
+ cursor: pointer;
+
+}
+
+.header {
+  background-color: none;
+  display: flex;
+  justify-content : space-between;
+  margin: 0 0 1em 0;
+  height:20vh;
+}
+@media (max-width: 675px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    height:50vh;
+  }
+  
+  .links-btn {
+    flex-direction: column;
+  }
+
+  .logo{
+    justify-content: center;
+    height:40vh;
+    width: auto;
+  }
+}

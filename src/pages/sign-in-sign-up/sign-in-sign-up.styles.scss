@@ -1,0 +1,16 @@
+.form-container{
+    display: flex;
+    margin: 0 auto ;
+  }
+  span{
+    color: darkblue;
+
+  }
+  @media(max-width: 780px){
+  .form-container{
+    flex-direction: column;
+  }
+  span{
+    margin: 2em 0 0 0;
+  }
+}
