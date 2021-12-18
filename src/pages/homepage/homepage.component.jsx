@@ -6,7 +6,9 @@ import "./homepage.styles.scss";
 import { useNavigate } from "react-router-dom";
 const Homepage = () => {
  let navigate = useNavigate();
- return( <div className="homepage" style={{ backgroundImage: "url(/coffee-bg-1.jpg)" }}>
+ return( <div className="homepage"  style={{ 
+  backgroundImage: `url("https://i.ibb.co/zftQRtD/coffee-bg-1.jpg")` 
+}} >
   <div className='container bg-setup' style={{ backgroundColor: "white" }} >
   
     <span className='msg-text'>You know what! <br/> Today, is a prefect day <br/>& This is the best time <br/>for having a cup of<br/>Coffee <FontAwesomeIcon icon= {faCoffee} /></span>
