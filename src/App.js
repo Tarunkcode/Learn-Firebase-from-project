@@ -7,7 +7,7 @@ import Header  from "./components/header/header.component";
 import {auth, createUserProfileDocument, onAuthStateChanged} from './firebase/firebase.utils';
 import {onSnapshot} from 'firebase/firestore';
 import MenuPage from "./pages/menu/menu.component";
-
+import Footer from './/components/footer/footer.component';
 class App extends React.Component {
   constructor(){
     super();
@@ -50,22 +50,23 @@ this.unsubscribeFromAuth();
       <div>
         <Header  currentUser={this.state.currentUser} />
         <Routes>
-            <Route exact path="/" element={<Homepage/>} />
+          <Route exact path ='/' element ={<Homepage/>} />
+            <Route exact path="/coffee-house" element={<Homepage/>} />
             <Route exact path="/menu" element={<MenuPage/>} />
-         {/* <Route element={<ProtectedRoute  currentUser={this.state.currentUser}/>}> */}
+         <Route element={<ProtectedRoute  currentUser={this.state.currentUser}/>}> 
 
             <Route exact path="/signin" element= {<SignInAndSignUpPage/> }/>
-         {/* </Route> */}
+         </Route>
 
         </Routes>
-         
+        <Footer />
       </div>
     );
   }
 }
-// const ProtectedRoute = ({currentUser}) => {
-//   let navigate = useNavigate();
-//  return currentUser ? navigate('/'): (<Outlet/>)
-// }
+const ProtectedRoute = ({currentUser}) => {
+  let navigate = useNavigate();
+ return currentUser ? navigate('/'): (<Outlet/>)
+}
  
 export default App;
