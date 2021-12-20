@@ -2,9 +2,9 @@ import * as firebase from 'firebase/app';
 import { initializeApp } from "firebase/app";
 import 'firebase/firestore';
 
-import {getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, createUserWithEmailAndPassword } from 'firebase/auth';
+import {getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, getDoc, doc, setDoc } from "firebase/firestore";
-
+ export {signInWithEmailAndPassword};
 
 export {onAuthStateChanged};
 export {createUserWithEmailAndPassword}
