@@ -10,7 +10,7 @@ import {signOut} from 'firebase/auth';
 const Header = ({currentUser}) => (
   <div className="header">
     <Link className="logo-container"to="/">
-      <img class="logo" src="/thumbnail.jpg" alt="logo" />
+      <img class="logo" src="https://i.ibb.co/X7XftYV/thumbnail.png" alt="logo" />
      {/* <h1 className='logo-text'>rama coffee house</h1> */}
     </Link>
     <div className="items">

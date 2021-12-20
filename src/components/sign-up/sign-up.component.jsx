@@ -55,7 +55,7 @@ event.preventDefault();
 
  <div className= 'new-user'> 
  <div className='form-title'> 
- <h3> I don't have an account</h3>
+ <h2> I don't have an account</h2>
  <span>sign up with your email and password</span>
 </div>
  <form onSubmit= {this.handleSubmit}> 
