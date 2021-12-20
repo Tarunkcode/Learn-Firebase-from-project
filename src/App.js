@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useNavigate, Outlet} from "react-router-dom";
+import { Route, Routes, Navigate, Outlet} from "react-router-dom";
 import "./App.css";
 import SignInAndSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component"
 import Homepage from "./pages/homepage/homepage.component";
@@ -53,10 +53,12 @@ this.unsubscribeFromAuth();
           <Route exact path ='/' element ={<Homepage/>} />
             <Route exact path="/coffee-house" element={<Homepage/>} />
             <Route exact path="/menu" element={<MenuPage/>} />
-         <Route element={<ProtectedRoute  currentUser={this.state.currentUser}/>}> 
+         <Route exact path = '/signin' 
+         element={this.state.currentUser 
+         ? <Navigate to='/' />
+         :<SignInAndSignUpPage/>} 
+         />
 
-            <Route exact path="/signin" element= {<SignInAndSignUpPage/> }/>
-         </Route>
 
         </Routes>
         <Footer />
@@ -64,9 +66,9 @@ this.unsubscribeFromAuth();
     );
   }
 }
-const ProtectedRoute = ({currentUser}) => {
-  let navigate = useNavigate();
- return currentUser ? navigate('/'): (<Outlet/>)
-}
+{/* const ProtectedRoute = ({currentUser}) => {
+  
+ return currentUser ? : (<Outlet/>)
+} */}
  
 export default App;
